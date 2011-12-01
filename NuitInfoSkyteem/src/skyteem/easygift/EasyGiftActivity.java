@@ -1,11 +1,7 @@
 package skyteem.easygift;
 
-import skyteem.nuitinfo.R;
-import android.app.Activity;
 import android.os.Bundle;
-import android.webkit.WebSettings;
 import android.webkit.WebView;
-import android.webkit.WebViewClient;
 import com.phonegap.DroidGap;
 
 public class EasyGiftActivity extends DroidGap {
