@@ -3,9 +3,12 @@ package skyteem.easygift;
 import skyteem.nuitinfo.R;
 import android.app.Activity;
 import android.os.Bundle;
+import android.webkit.WebSettings;
 import android.webkit.WebView;
+import android.webkit.WebViewClient;
+import com.phonegap.DroidGap;
 
-public class EasyGiftActivity extends Activity {
+public class EasyGiftActivity extends DroidGap {
 	WebView webView=null;
 	
     /** Called when the activity is first created. */
@@ -15,8 +18,18 @@ public class EasyGiftActivity extends Activity {
         setContentView(R.layout.main);
         
         webView = (WebView) findViewById(R.id.webView);
-        // Simplest usage: note that an exception will NOT be thrown
-        // if there is an error loading this page (see below).
-        webView.loadUrl("http://slashdot.org/");    
+
+        final WebSettings settings = webView.getSettings();
+        settings.setJavaScriptEnabled(true);
+        settings.setAllowFileAccess(true);
+        settings.setBuiltInZoomControls(false);
+        settings.setLayoutAlgorithm(WebSettings.LayoutAlgorithm.SINGLE_COLUMN);
+    
+        // Load a web page
+        webView.loadUrl("http://easygift.druil.net/test.html");   
+
+        
+        // hide address bar
+        webView.setWebViewClient(new WebViewClient());
     }
 }
