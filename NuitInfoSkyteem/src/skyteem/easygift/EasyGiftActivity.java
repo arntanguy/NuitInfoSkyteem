@@ -15,21 +15,6 @@ public class EasyGiftActivity extends DroidGap {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
-        
-        webView = (WebView) findViewById(R.id.webView);
-
-        final WebSettings settings = webView.getSettings();
-        settings.setJavaScriptEnabled(true);
-        settings.setAllowFileAccess(true);
-        settings.setBuiltInZoomControls(false);
-        settings.setLayoutAlgorithm(WebSettings.LayoutAlgorithm.SINGLE_COLUMN);
-    
-        // Load a web page
-        webView.loadUrl("http://easygift.druil.net/test.html");   
-
-        
-        // hide address bar
-        webView.setWebViewClient(new WebViewClient());
+        super.loadUrl("http://easygift.druil.net/test.html");
     }
 }
