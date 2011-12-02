@@ -9,6 +9,6 @@ public class EasyGiftActivity extends DroidGap {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        super.loadUrl("http://easygift.druil.net");
+        super.loadUrl("http://easygift.druil.net/index.php");
     }
 }
